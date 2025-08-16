@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuong Mech Shop VIP Card - VIP Membership</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .card-3d {
+            transform-style: preserve-3d;
+            perspective: 1000px;
+            transition: transform 0.5s;
+        }
+        .card-3d:hover {
+            transform: rotateY(10deg) rotateX(5deg);
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+        }
+        .vip-card {
+            background: linear-gradient(135deg, #f5af19 0%, #f12711 100%);
+            box-shadow: 0 20px 40px rgba(241, 39, 17, 0.3);
+        }
+        .shine-effect {
+            position: relative;
+            overflow: hidden;
+        }
+        .shine-effect::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -60%;
+            width: 40%;
+            height: 200%;
+            background: rgba(255, 255, 255, 0.13);
+            transform: rotate(30deg);
+            transition: all 0.3s;
+        }
+        .shine-effect:hover::after {
+            left: 120%;
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-100">
+    <!-- Navigation -->
+    <nav class="gradient-bg text-white shadow-lg">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <i class="fas fa-crown text-2xl mr-2 text-yellow-400"></i>
+                    <span class="font-bold text-xl">Cuong Mech VIP Card</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#benefits" class="hover:text-yellow-300 transition" onclick="event.preventDefault(); document.getElementById('benefits').scrollIntoView({behavior: 'smooth'})">Lợi ích</a>
+                    <a href="#pricing" class="hover:text-yellow-300 transition" onclick="event.preventDefault(); document.getElementById('pricing').scrollIntoView({behavior: 'smooth'})">Giá cả</a>
+                    <a href="https://chauchicuong.github.io/CuongMechShop/#contact" class="hover:text-yellow-300 transition">Liên hệ</a>
+                </div>
+                <button class="md:hidden text-white focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="gradient-bg text-white py-20">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6">Cuong Mech <span class="text-yellow-400">VIP</span> Card</h1>
+                <p class="text-xl mb-8 text-gray-300">The Cuong Mech Vip Card gives you access to premium benefits, luxury experiences, and personalized services designed for discerning individuals.</p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="https://chauchicuong.github.io/CuongMechShop/#contact">
+                        <button class="bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105">
+                            Lụm ngay <i class="fas fa-arrow-right ml-2"></i>
+                        </button>
+                    </a>
+                    <a href="https://chauchicuong.github.io/CuongMechShop/">
+                        <button class="border-2 border-white hover:bg-white hover:text-black font-bold py-3 px-8 rounded-full transition duration-300">
+                            CM Shop
+                        </button>
+                    </a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <div class="card-3d shine-effect w-80 h-48 rounded-2xl shadow-2xl relative overflow-hidden">
+                    <img src="https://i.postimg.cc/bv9nNGH9/Chat-GPT-Image-01-22-06-17-thg-8-2025.png" alt="VIP Card" class="w-full h-full object-cover rounded-2xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="benefits" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-16">Member <span class="text-yellow-600">Benefits</span></h2>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+                <div>
+                    <div class="mb-8">
+                        <div class="flex items-start mb-4">
+                            <div class="bg-yellow-500 p-2 rounded-full mr-4 mt-1">
+                                <i class="fas fa-check text-white text-sm"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-1">Tích điểm siêu tốc</h3>
+                                <p class="text-gray-600">Tăng điểm CMS Token với số lượng lớn, có thể quy đổi mặt hàng bất kì trong Shop Đặc Biệt.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-8">
+                        <div class="flex items-start mb-4">
+                            <div class="bg-yellow-500 p-2 rounded-full mr-4 mt-1">
+                                <i class="fas fa-check text-white text-sm"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-1">Giảm giá mặt hàng</h3>
+                                <p class="text-gray-600">Giảm giá cho các mặt hàng không giới hạn. Giá càng cao - Giảm càng mạnh.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-8">
+                        <div class="flex items-start mb-4">
+                            <div class="bg-yellow-500 p-2 rounded-full mr-4 mt-1">
+                                <i class="fas fa-check text-white text-sm"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-1">Ưu tiên đặt hàng</h3>
+                                <p class="text-gray-600">Bạn sẽ được ưu tiên được Shop liên hệ mà không cần phải chờ đợi slot kế tiếp.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative">
+                    <div class="bg-white p-8 rounded-xl shadow-lg">
+                        <h3 class="text-2xl font-bold mb-4">Trải nghiệm sự khác biệt</h3>
+                        <p class="text-gray-600 mb-6">Thành viên của Shop được hưởng mức tiết kiệm trung bình hơn 300.000 đồng mỗi tháng và những quyền lợi độc quyền mà tiền không thể mua được.</p>
+                        <div class="flex items-center">
+                            <div class="mr-4">
+                                <div class="text-4xl font-bold text-yellow-600">0</div>
+                                <div class="text-sm text-gray-500">Thành viên VIP</div>
+                            </div>
+                            <div class="mr-4">
+                                <div class="text-4xl font-bold text-yellow-600">~300k</div>
+                                <div class="text-sm text-gray-500">Hưởng lợi chính sách mặt hàng</div>
+                            </div>
+                            <div>
+                                <div class="text-4xl font-bold text-yellow-600">12/7</div>
+                                <div class="text-sm text-gray-500">Hỗ trợ</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="absolute -z-10 -bottom-4 -right-4 w-full h-full border-2 border-yellow-300 rounded-xl"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-16">Membership <span class="text-yellow-600">Tiers</span></h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <!-- Silver Tier -->
+                <div class="border border-gray-200 rounded-xl p-8 hover:shadow-lg transition duration-300">
+                    <div class="text-center mb-6">
+                        <h3 class="text-xl font-bold mb-2">Bạc</h3>
+                        <div class="text-gray-500 mb-4">Quyền lợi đầu vào</div>
+                        <div class="text-4xl font-bold mb-4">70k<span class="text-lg text-gray-500">/tháng</span></div>
+                        <button class="w-full border-2 border-gray-300 text-gray-700 font-bold py-2 px-4 rounded-full transition duration-300 hover:bg-gray-100">Mua ngay</button>
+                    </div>
+                    <ul class="space-y-3">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>Hỗ trợ thông thường qua Zalo</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>Nhận ngay 100 điểm CMS Token</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>Giảm giá 5% cho tất cả các mặt hàng</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Gold Tier (Featured) -->
+                <div class="border-2 border-yellow-500 rounded-xl p-8 transform hover:scale-105 transition duration-300 shadow-lg relative overflow-hidden">
+                    <div class="absolute top-0 right-0 bg-yellow-500 text-white text-xs font-bold px-3 py-1 rounded-bl-lg">POPULAR</div>
+                    <div class="text-center mb-6">
+                        <h3 class="text-xl font-bold mb-2">Vàng</h3>
+                        <div class="text-gray-500 mb-4">Trải nghiệm cao cấp</div>
+                        <div class="text-4xl font-bold mb-4">200k<span class="text-lg text-gray-500">/tháng</span></div>
+                        <button class="w-full bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded-full transition duration-300">Mua ngay</button>
+                    </div>
+                    <ul class="space-y-3">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>Ưu tiên hỗ trợ qua Zalo</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>Nhận ngay 500 điểm CMS Token</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>Giảm giá 10% cho tất cả các mặt hàng</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>Lv tùy chỉnh, không giới hạn</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Platinum Tier -->
+                <div class="border border-gray-200 rounded-xl p-8 hover:shadow-lg transition duration-300">
+                    <div class="text-center mb-6">
+                        <h3 class="text-xl font-bold mb-2">Tinh Anh</h3>
+                        <div class="text-gray-500 mb-4">Con m* nó VIP</div>
+                        <div class="text-4xl font-bold mb-4">350k<span class="text-lg text-gray-500">/tháng</span></div>
+                        <button class="w-full border-2 border-gray-300 text-gray-700 font-bold py-2 px-4 rounded-full transition duration-300 hover:bg-gray-100">Mua ngay</button>
+                    </div>
+                    <ul class="space-y-3">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>Hỗ trợ 24/7 qua Zalo</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>Nhận ngay 1000 CMS Token</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>Giảm giá 15-20% cho tất cả các mặt hàng</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>Lv và Thông tin tài khoản tùy chỉnh, không giới hạn</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>Bơm 500k vàng vào tài khoản của bạn</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>Vô hạn thẻ giảm thời gian nâng cấp</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Purchase History -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-16">Lịch sử <span class="text-yellow-600">Người mua thẻ</span></h2>
+            <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                <div class="grid grid-cols-4 bg-gray-100 p-4 font-bold">
+                    <div>Tên thành viên</div>
+                    <div>Loại thẻ</div>
+                    <div>Ngày mua</div>
+                    <div>Thời hạn</div>
+                </div>
+                <div class="divide-y divide-gray-200">
+                    <div class="grid grid-cols-4 p-4 hover:bg-gray-50">
+                        <div class="font-medium">Cuong Mech Shop Admin</div>
+                        <div><span class="bg-gray-200 px-2 py-1 rounded text-sm">Bạc</span></div>
+                        <div>15/08/2025</div>
+                        <div>- tháng</div>
+                    </div>
+                    <div class="grid grid-cols-4 p-4 hover:bg-gray-50">
+                        <div class="font-medium">Cuong Mech Shop Admin</div>
+                        <div><span class="bg-yellow-100 px-2 py-1 rounded text-sm">Vàng</span></div>
+                        <div>10/08/2025</div>
+                        <div>- tháng</div>
+                    </div>
+                    <div class="grid grid-cols-4 p-4 hover:bg-gray-50">
+                        <div class="font-medium">Cuong Mech Shop Staffs</div>
+                        <div><span class="bg-purple-100 px-2 py-1 rounded text-sm">Tinh Anh</span></div>
+                        <div>05/08/2025</div>
+                        <div>- tháng</div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="gradient-bg text-white py-20">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Sẵn sàng nâng tầm sự khoe khoang của bạn?</h2>
+            <p class="text-xl mb-10 max-w-2xl mx-auto text-gray-300">Hãy tham gia cùng Thẻ thành viên VIP, tận hưởng những đặc quyền độc quyền và trải nghiệm khó quên.</p>
+            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                <a href="https://chauchicuong.github.io/CuongMechShop/#contact">
+                    <button class="bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-4 px-10 rounded-full transition duration-300 transform hover:scale-105">
+                        Lụm thẻ ngay <i class="fas fa-arrow-right ml-2"></i>
+                    </button>
+                </a>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-crown text-2xl mr-2 text-yellow-400"></i>
+                        <span class="font-bold text-xl">CMV Card</span>
+                    </div>
+                    <p class="text-gray-400 mb-4">Gói thành viên cao cấp dành cho những người yêu cầu dịch vụ đặc biệt và quyền lợi độc quyền.</p>
+                
+                </div>
+                
+                
+                
+            </div>
+            
+            
+        </div>
+    </footer>
+
+    <script>
+        // Simple animation for the VIP card on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            const card = document.querySelector('.card-3d');
+            setTimeout(() => {
+                card.style.transform = 'rotateY(0) rotateX(0)';
+            }, 500);
+            
+            // Mobile menu toggle functionality
+            const mobileMenuButton = document.querySelector('button.md\\:hidden');
+            mobileMenuButton.addEventListener('click', function() {
+                const mobileMenu = document.querySelector('.hidden.md\\:flex');
+                mobileMenu.classList.toggle('hidden');
+                mobileMenu.classList.toggle('flex');
+                mobileMenu.classList.toggle('flex-col');
+                mobileMenu.classList.toggle('absolute');
+                mobileMenu.classList.toggle('top-16');
+                mobileMenu.classList.toggle('left-0');
+                mobileMenu.classList.toggle('right-0');
+                mobileMenu.classList.toggle('bg-gray-900');
+                mobileMenu.classList.toggle('p-4');
+                mobileMenu.classList.toggle('space-y-4');
+                mobileMenu.classList.toggle('space-x-0');
+            });
+        });
+    </script>
+</body>
+</html>
